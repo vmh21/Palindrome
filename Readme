@@ -1,0 +1,37 @@
+# Palindrome
+Palindrome function in these Languages: JavaScript, Python.
+ 
+# Python:
+def find_palidrome(word):
+    if len(word) < 1:
+        return True
+    else:
+        if word[0] == word[-1]:
+            return find_palidrome(word[1:-1])
+        else:
+            return False
+def fileInput(alice.txt):
+    f = open(alice.txt,'r')
+    line = f.readline().strip()
+    while line != '':
+        if(find_palidrome(line)):
+            print(line)
+        else:
+            print("No palindromes found")
+        line = f.readline().strip()
+    file.close()
+    
+    
+   # JavaScript:
+    
+   function palindrome(str) {
+ var re = /[^A-Za-z0-9]/g;
+ str = str.toLowerCase().replace(re, '');
+ var len = str.length;
+ for (var i = 0; i < len/2; i++) {
+   if (str[i] !== str[len - 1 - i]) {
+       return false;
+   }
+ }
+ return true;
+} 
